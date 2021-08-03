@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Canvas implements AddToCanvas, GetSelectedShapeInCanvas{
+public class Canvas implements AddShapeToCanvas, GetSelectedShapeInCanvas{
     public final List<SizeShape> shapes = new ArrayList<SizeShape>();
 
     public void addShape(SizeShape shape, Rectangle rectangle){
