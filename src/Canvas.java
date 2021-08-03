@@ -2,19 +2,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Canvas {
-    private List<Shape> shapes = new ArrayList<Shape>();
+    private List<SizeShape> shapes = new ArrayList<SizeShape>();
 
-    public List<Shape> getShapes(){
+    public List<SizeShape> getShapes(){
         return this.shapes;
     }
 
-    public void addShape(Shape shape, Rectangle rectangle){
+    public void addShape(SizeShape shape, Rectangle rectangle){
         shape.setRectangle(rectangle);
         this.shapes.add(shape);
     }
 
-    public Shape getSelected(Point point){
-        for(Shape shape : shapes){
+    public SizeShape getSelected(Point point){
+        for(SizeShape shape : shapes){
             if(point.x >= shape.getRectangle().left && point.x<=shape.getRectangle().bottom
             && point.y >= shape.getRectangle().top && point.y <= shape.getRectangle().right){
                 return shape;

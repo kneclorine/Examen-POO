@@ -1,4 +1,4 @@
-public abstract class Shape{
+public abstract class Shape implements ColorShape, SizeShape, DrawShape{
     
     private String borderColor;
     private String bgColor;
@@ -26,8 +26,5 @@ public abstract class Shape{
 
     public void setRectangle(Rectangle rectangle) {
         this.rectangle = rectangle;
-    }
-
-    public void draw(){
     }
 }
