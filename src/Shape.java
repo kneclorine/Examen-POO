@@ -1,4 +1,4 @@
-public abstract class Figura{
+public abstract class Shape{
     
     private String borderColor;
     private String bgColor;

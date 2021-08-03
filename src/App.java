@@ -1,17 +1,17 @@
 public class App {
     public static void main(String[] args) throws Exception {
         
-        Lienzo lienzo = new Lienzo();
+        Canvas lienzo = new Canvas();
 
-        Figura figura1 = Servicio.createShape("CORAZON");
+        Shape figura1 = Service.createShape(Shapes.HEART);
         lienzo.addShape(figura1, new Rectangle(new Point(0, 0) , new Point(10, 20)));
 
-        Figura figura2 = Servicio.createShape("RAYO");
+        Shape figura2 = Service.createShape(Shapes.LIGHTNING);
         lienzo.addShape(figura2, new Rectangle(new Point(0, 25) , new Point(10, 30)));
         
 
         Point selection = new Point(0, 0); // Punto donde hacemos click para seleccionar una figura.
-        Figura selectedShape = lienzo.getSelected(selection); //Figura que se encuentre en ese punto.
+        Shape selectedShape = lienzo.getSelected(selection); //Figura que se encuentre en ese punto.
 
         if(selectedShape != null){
             selectedShape.setBorderColor("negro");
